@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import HeartbeatSection from './HeartbeatSection';
 
 export default function FinalSection() {
   const ref = useRef(null);
@@ -66,6 +67,17 @@ export default function FinalSection() {
           <p className="font-[Amiri] text-gold-200/60 text-base mt-3">
             من قلب يحبك 💍
           </p>
+        </div>
+        
+        <div
+          className={`transition-all duration-1000 ${
+            isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-12'
+          }`}
+          style={{ transitionDelay: '700ms' }}
+        >
+          <HeartbeatSection />
         </div>
 
         {/* Footer blessing */}
